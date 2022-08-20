@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Responsive Landing Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon-32x32.png" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;    
+     }
+
+     body {
+      width: 375px;
+     }
+
+     h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+     }
+
+     p, button {
+      font-family: 'Open Sans', sans-serif;
+     }
+
+     .section1 {
+      background-image: url(images/bg-hero-mobile.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: hsl(193, 100%, 96%);
+      width: 375px;
+      height: 723px;
+     }
+
+     .container {
+      padding: 30px 15px;
+     }
+
+     header {
+     width: 100%;
+     height: 100px;
+     }
+
+     .header:after {
+      content: "";
+      display: table;
+      clear: both;
+     }
+
+     .nav-bar {
+      display: block;
+      float: left;
+     }
+
+     .logo1{
+      width: 100px; 
+      height: 16.3px;
+      /*margin-right: 140px;*/
+     }
+
+     .nav-btn {
+      border: none;
+      background-color: #fff;
+      color: hsl(192, 100%, 9%);
+      font-size: 10px;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 50px;
+      width: 100px;
+      height: 25px;
+      padding: 3px 0;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
+      position: absolute;
+      top: 35px;
+      right: 20px;
+     }
+    
+     .nav-btn:active {
+      color: #82898f;
+      background-color: #fff;
+     }
+
+     .main-section1 {
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+     }
+
+     .build1 {
+      flex: 50%;
+      padding: 0px 25px;
+     }
+
+     .build-h1 {
+      text-align: center;
+      font-size: 25px;
+      margin-bottom: 30px;
+      color: hsl(192, 100%, 9%);
+     }
+
+     .build-p {
+      font-size: 15.5px;
+      font-weight: 400;
+      margin-bottom: 35px;
+      color: hsl(192, 100%, 9%);
+      text-align: center;
+     }
+
+     .build-btn {
+      border: none;
+      background-color: hsl(322, 100%, 66%);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      border-radius: 50px;
+      height: 40px;
+      width: 240px;
+      padding: 10px 40px;
+      text-align: center;
+      margin-left: 24px;
+      margin-bottom: 60px;
+     }
+
+     .build-btn:active {
+      background-color: #ff9bdb;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 6px;
+     }
+
+     .img-mock-up {
+      display: block;
+      width: 295px; 
+      height: 210.6px;
+      margin: 0 auto; 
+     }
+
+     .main {
+      padding: 60px 20px 0px 20px;
+     }
+
+     .main-section2 {
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+     }
+
+     .main-section21 {
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+     }
+
+     .main-container2 {
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 10px;
+      padding: 60px 20px 30px 20px;
+      margin-bottom: 35px;
+     }
+
+     .img-container {
+        width: 213.2px; 
+        height: 174.55px;
+        margin-bottom: 50px;
+     }
+
+     .grow {
+      padding: 0px 20px;
+     }
+
+     .grow-h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: hsl(192, 100%, 9%);
+      text-align: center;
+     }
+
+     .grow-p {
+      font-size: 14px;
+      font-weight: 400;
+      color: hsl(208, 11%, 55%);
+      text-align: center;
+      margin-bottom: 5px;
+     }
+
+     .flow {
+      padding: 0px 20px;
+     }
+
+     .flow-h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: hsl(192, 100%, 9%);
+      text-align: center;
+     }
+
+     .flow-p {
+      font-size: 14px;
+      font-weight: 400;
+      color: hsl(208, 11%, 55%);
+      text-align: center;
+      margin-bottom: 5px;
+     }
+
+     .main-container3 {
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 10px;
+      padding: 60px 20px 30px 20px;
+      margin-bottom: 35px;
+     }
+
+     .users {
+      padding: 0px 20px;
+     }
+
+     .users-h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: hsl(192, 100%, 9%);
+      text-align: center;
+     }
+
+     .users-p {
+      font-size: 14px;
+      font-weight: 400;
+      color: hsl(208, 11%, 55%);
+      text-align: center;
+      margin-bottom: 5px;
+     }
+
+     .main-container4 {
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 10px;
+      padding: 40px 10px;
+      width: 355px;
+      height: 163px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #fff;
+     }
+
+     .pop-up {
+      position: relative;
+      top: 60px;
+     }
+
+     .pop-h1 {
+      font-size: 18px;
+      color: hsl(192, 100%, 9%);
+      margin-bottom: 20px;
+      text-align: center;
+     }
+
+     .pop-btn {
+      border: none;
+      background-color: hsl(322, 100%, 66%);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      cursor: pointer;
+      border-radius: 50px;
+      height: 40px;
+      width: 200px;
+      padding: 5px 20px;
+      text-align: center;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px;
+     }
+
+     .pop-btn:active {
+      background-color: #ff9bdb;
+     }
+
+     .footer {
+      height: 860px;
+      background-color: hsl(192, 100%, 9%);
+      padding: 150px 30px 80px 30px;
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+     }
+
+     .footer-content {
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+
+     }
+
+     .footer-contact {
+      flex: 40%;
+     }
+
+     .footer-link1 {
+      flex: 20%;
+      margin-top: 45px;
+     }
+
+     .footer-link2 {
+      flex: 20%;
+     }
+
+     .footer-social {
+      flex: 20%;
+      margin-top: 40px;
+      margin-left: 90px;
+     }
+
+     .footer-logo {
+      margin-bottom: 30px;
+      width: 150px; 
+      height: 24.45px;
+     }
+
+     .contact-icons {
+      display: block;
+      font-size: 16px;
+     }
+
+     .img-con {
+      float: left;
+      margin-top: 4px;
+     }
+
+     .p-con {
+      text-align: left;
+      padding-left: 40px;
+     }
+
+     .con-span {
+      display: block;
+      margin-bottom: 20px;
+     }
+
+     ul {
+      list-style: none;
+     }
+
+     .link {
+      display: block;
+      margin-bottom: 20px;
+      text-align: left;
+      margin-right: 100px;
+     }
+
+     a {
+      text-decoration: none;
+      font-size: 16px;
+      color: #fff;
+     }
+     a:hover, a:active {
+      text-decoration: underline;
+     }
+
+     .social-icon {
+      margin-right: 15px;
+      width: 30px; 
+      height: 30px; 
+     }
+
+     .social-icon:hover, .social-icon:active {
+      -webkit-filter: opacity(0.4) drop-shadow(0 0 0 deeppink);
+      filter: opacity(0.4) drop-shadow(0 0 0 deeppink);
+     }
+
+    .copyright {
+      font-size: 12px;
+      text-align: center;
+      position: relative;
+      margin-top: 20px;
+    }
+
+    @media screen and (max-width: 523px){
+
+    body {
+    width: 100%;
+    }
+    .section1 {
+    width: 100%;
+    }
+    .build-btn {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    }
+
+    .footer {
+    width: 100%;
+    }
+    }
+
+    @media screen and (max-width: 952px) and (min-width: 524px) {
+
+      body {
+      width: 100%;
+      }
+      .section1 {
+      width: 100%;
+     }
+     .build-btn {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 60px;
+     }
+
+     .nav-btn {
+      position: absolute;
+      top: 35px;
+      right: 20px;
+     }
+
+     .footer {
+      width: 100%;
+    }
+    }
+
+    @media screen and (min-width: 953px) { 
+      body {
+      width: 100%;
+     }
+
+     h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+     }
+
+     p, button {
+      font-family: 'Open Sans', sans-serif;
+     }
+
+     .section1 {
+      background-image: url(images/bg-hero-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: hsl(193, 100%, 96%);
+      width: 100%;
+      height: 800px;
+     }
+
+     .container {
+      padding: 40px 90px;
+     }
+
+     header {
+     width: 100%;
+     height: 100px;
+     }
+
+     .logo{
+      margin-top: 10px;
+      width: 200px; 
+      height: 32.6px;
+      margin-right: 0px;
+     }
+
+     .nav-btn {
+      border: none;
+      background-color: #fff;
+      color: hsl(192, 100%, 9%);
+      font-size: 13px;
+      font-weight: 700;
+      text-align: center;
+      cursor: pointer;
+      border-radius: 50px;
+      width: 150px;
+      height: 40px;
+      padding: 20px auto;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
+      position: absolute;
+      top: 35px;
+      right: 100px;
+     }
+
+     .nav-btn:active {
+      color: #82898f;
+      background-color: #fff;
+     }
+
+     .main-section1 {
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+     }
+
+     .build {
+      flex: 50%;
+      padding-right: 25px;
+     }
+
+     .build-h1 {
+      font-size: 40px;
+      margin-bottom: 30px;
+      color: hsl(192, 100%, 9%);
+     }
+
+     .build-p {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 30px;
+      color: hsl(192, 100%, 9%);
+     }
+
+     .build-btn {
+      border: none;
+      background-color: hsl(322, 100%, 66%);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      border-radius: 50px;
+      height: 50px;
+      width: 250px;
+      padding: 10px 50px;
+     }
+
+     .build-btn:active {
+      background-color: #ff9bdb;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 6px;
+     }
+
+     .mock-up {
+      flex: 50%;
+     }
+
+     .img-mock-up {
+      width: 630px; 
+      height: 450px; 
+     }
+
+     .main {
+      padding: 150px 120px 50px 120px;
+     }
+
+     .main-section2 {
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+     }
+
+     .main-container2 {
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 10px;
+      padding: 50px 30px;
+      margin-bottom: 50px;
+     }
+
+     .img-container {
+        width: 350px; 
+        height: 290px;
+     }
+
+     .grow {
+      padding: 0px 140px 0px 70px;
+     }
+
+     .grow-h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+      color: hsl(192, 100%, 9%);
+     }
+
+     .grow-p {
+      font-size: 18px;
+      font-weight: 400;
+      color: hsl(208, 11%, 55%);
+     }
+
+     .flow-img {
+      padding: 0px 140px 0px 70px;
+     }
+
+     .flow-h1 {
+      font-size: 30px;
+      margin-bottom: 10px;
+      color: hsl(192, 100%, 9%);
+     }
+
+     .flow-p {
+      font-size: 18px;
+      font-weight: 400;
+      color: hsl(208, 11%, 55%);
+     }
+
+     .main-container3 {
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 10px;
+      padding: 50px 30px;
+     }
+
+     .users {
+      padding: 0px 140px 0px 70px;
+     }
+
+     .users-h1 {
+      font-size: 30px;
+      color: hsl(192, 100%, 9%);
+     }
+
+     .users-p {
+      font-size: 18px;
+      font-weight: 400;
+      color: hsl(208, 11%, 55%);
+     }
+
+     .main-container4 {
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 10px;
+      padding: 55px 30px;
+      width: 750px;
+      height: 250px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #fff;
+     }
+
+     .pop-up {
+      position: relative;
+      top: 100px;
+     }
+
+     .pop-h1 {
+      font-size: 30px;
+      color: hsl(192, 100%, 9%);
+      margin-bottom: 25px;
+     }
+
+     .pop-btn {
+      border: none;
+      background-color: hsl(322, 100%, 66%);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      border-radius: 50px;
+      height: 65px;
+      width: 340px;
+      padding: 10px 50px;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px;
+     }
+
+     .pop-btn:active {
+      background-color: #ff9bdb;
+     }
+
+
+     .footer {
+      height: 650px;
+      background-color: hsl(192, 100%, 9%);
+      padding: 200px 50px 50px 80px;
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+     }
+
+     .footer-content {
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+
+     }
+
+     .footer-contact {
+      flex: 40%;
+     }
+
+     .footer-link1 {
+      flex: 20%;
+      margin-top: 0px;
+     }
+
+     .footer-link2 {
+      flex: 20%;
+     }
+
+     .footer-social {
+      flex: 20%;
+     }
+
+     .footer-logo {
+      margin-bottom: 30px;
+      width: 300px; 
+      height: 48.9px;
+     }
+
+     .contact-icons {
+      display: inline-block;
+      font-size: 14px;
+      padding-right: 100px;
+     }
+
+     .img-con {
+      float: left;
+      margin-top: 5px;
+   
+     }
+
+     .p-con {
+      font-size: 18px;
+      text-align: left;
+      padding-left: 40px;
+     }
+
+     .con-span {
+      display: block;
+      margin-bottom: 20px;
+     }
+
+     ul {
+      list-style: none;
+     }
+
+     .link {
+      display: block;
+      margin-bottom: 20px;
+      text-align: left;
+      margin-right: 100px;
+     }
+
+     a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #fff;
+     }
+     a:hover, a:active {
+      text-decoration: underline;
+     }
+
+     .social-icon {
+      margin-right: 15px;
+      width: 30px; 
+      height: 30px; 
+     }
+
+     .social-icon:hover, .social-icon:active {
+      -webkit-filter: opacity(0.4) drop-shadow(0 0 0 deeppink);
+      filter: opacity(0.4) drop-shadow(0 0 0 deeppink);
+     }
+
+    .copyright {
+      font-size: 14px;
+      text-align: end;
+      position: relative;
+      margin-top: 50px;
+    }
+    }
+
+    @media screen and (min-width: 1300px) {
+      .nav-btn{
+        position: absolute;
+        top: 35px;
+        right: 100px;
+      }
+    }
+
+    </style>
+  </head>
+  <body>
+    <section class="section1 container">
+      <header class="header">
+        <nav class="nav-bar">
+          <img src="images/logo.svg" alt="Huddle" class="logo logo1">
+          <button class="nav-btn">Try it Free</button>
+        </nav>
+      </header>
+      <article class="main-section1">
+       <div class="build build1">
+        <h1 class="build-h1">Build The Community Your Fans Will Love</h1>
+        <p class="build-p">Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.</p>
+        <button class="build-btn">Get Started For Free</button>
+       </div>
+       <div class="mock-up">
+        <img src="images/illustration-mockups.svg" alt="Mock-up" class="img-mock-up">
+       </div>
+      </article>
+    </section> 
+    <main class="main">
+      <section class="main-section2 main-container2">
+        <div class="grow">
+          <h1 class="grow-h1">Grow Together</h1>
+          <p class="grow-p">Generate meaningful discussions with your audience and build a strong, loyal community. Think of the insightful conversations you miss out on with a feedback form.</p>
+        </div>
+        <div class="grow-img">
+          <img src="images/illustration-grow-together.svg" alt="Grow Together" class="img-container">
+        </div>
+      </section>
+      <section class="main-section2 main-container2 main-section21">
+        <div class="flow-img">
+          <img src="images/illustration-flowing-conversation.svg" alt="Flowing Conversation" class="img-container">
+        </div>
+        <div class="flow">
+          <h1 class="flow-h1">Flowing Conversations</h1>
+          <p class="flow-p">You wouldn't paginate a conversation in real life, so why do it online? Our threads have just-in-time loading for a more natural flow.</p>
+        </div>
+      </section>
+      <section class="main-section2 main-container3">
+        <div class="users">
+          <h1 class="users-h1">Your Users</h1>
+          <p class="users-p">It takes no time at all to integrate Huddle with your app's authentication solution. This means, once signed in to your app, your users can start chatting immediately.</p>
+        </div>
+        <div class="users-img">
+          <img src="images/illustration-your-users.svg" alt="Your Users" class="img-container">
+        </div>
+      </section>
+    </main>
+    <section class="main-container4 pop-up">
+      <h1 class="pop-h1">Ready To Build Your Community?</h1>
+      <button class="pop-btn">Get Started For Free</button>
+    </section>
+    <footer class="footer">
+      <img src="images/logo.png" alt="Huddle Logo" class="footer-logo">
+      <section class="footer-content">
+        <div class="footer-contact">
+          <ul>
+            <li class="contact-icons">
+              <span class="con-span">
+               <img src="images/icon-location.svg" alt="icon-location" class="img-con">
+               <p class="p-con">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magma aliqua</p>
+              </span>
+            </li>
+            <li class="contact-icons"> 
+              <span class="con-span">
+               <img src="images/icon-phone.svg" alt="icon-phone" class="img-con">
+               <p class="p-con">+1-543-123-4567</p>
+              </span>
+            </li>
+            <li class="contact-icons">
+              <span class="con-span">
+               <img src="images/icon-email.svg" alt="icon-email" class="img-con">
+               <p class="p-con">example@huddle.com</p>
+              </span>
+            </li>
+          </ul>       
+        </div>
+        <div class="footer-link1">
+          <ul>
+            <li class="link"><a href="#">About Us</a></li>
+            <li class="link"><a href="#">What We Do</a></li>
+            <li class="link"><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-link2">
+          <ul>
+            <li class="link"><a href="#">Career</a></li>
+            <li class="link"><a href="#">Blog</a></li>
+            <li class="link"><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <a href="#"><img src="images/facebook.png" alt="Facebook" class="social-icon"></a>
+          <a href="#"><img src="images/twitter.png" alt="Twitter" class="social-icon"></a>
+          <a href="#"><img src="images/instagram.png" alt="Instagram" class="social-icon"></a>
+        </div>
+      </section>
+      <div class="copyright">
+        <p>©Copyright 2018 Huddle. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
